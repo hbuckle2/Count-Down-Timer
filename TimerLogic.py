@@ -4,7 +4,7 @@ import time
 from winsound import PlaySound
 
 app_window = Tk()
-app_window.geometry('400x300')
+app_window.geometry('500x500')
 app_window.resizable(0,0)
 app_window.config(bg = 'blanched almod')
 app_window.title('Horace Countdown Clock And Timer')
@@ -52,3 +52,8 @@ def countdown():
             mins.set('00')
             hrs.set('00')
         times -= 1
+        
+        
+Label(app_window, font ='arial 15 bold', text = 'set the time',   bg ='papaya whip').place(x = 40 ,y = 150)
+Button(app_window, text='START', bd ='5', command = countdown, bg = 'antique white', font = 'arial 10 bold').place(x=150, y=210)
+app_window.mainloop()
